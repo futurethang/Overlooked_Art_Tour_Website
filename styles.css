@@ -1,0 +1,145 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: forestgreen;
+  padding: 2em;
+}
+
+/* HEADER AND NAV STYLES */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logo {
+  flex-basis: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 3;
+  align-items: center;
+}
+
+nav ul {
+  align-items: center;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 1em 1em 0;
+  padding: 0.5em;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+}
+
+.featured {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* HERO SECTION STYLES */
+
+.hero h1 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 6vw;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* FEATURED INFORMATION SECTION STYLES */
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.top-fold {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.col-1-3 {
+  width: 32%;
+  background: rgba(32, 54, 43, 0.2);
+  padding: 1em;
+}
+
+.feature .figure {
+  margin: 0;
+  padding: 0;
+  flex-grow: 2;
+}
+
+.top-fold-img {
+  width: 100%;
+}
+
+/* BEGIN STYLES FOR SMALLER DEVICES - TABLETS AND PHONES */
+
+@media only screen and (max-width: 840px) {
+  /* For mobile phones: */
+
+  /* HEADER SECTION STYLE MODIFICATIONS */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
+  /* HERO SECTION STYLE MODIFICATIONS */
+
+  .hero h1 {
+    font-size: 6.5vw;
+  }
+
+  /* FEATURED SECTION STYLE MODIFICATIONS */
+
+  .top-fold {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: stretch; */
+  }
+
+  .col-1-3 {
+    width: 100%;
+    background: rgba(32, 54, 43, 0.2);
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .feature {
+    margin: 0 0 1em 0;
+  }
+
+  .feature .figure {
+    margin: 0 2em 0 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .card-text {
+    align-self: flex-end;
+  }
+  
+  .top-fold-img {
+    width: 100%;
+  }
+}
