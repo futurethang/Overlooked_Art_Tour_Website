@@ -7,7 +7,14 @@
 body {
   background: forestgreen;
   padding: 2em;
+  overflow-x:hidden;
 }
+
+.rounded {
+  border-radius: 4px;
+}
+
+/* BEGIN FULL PAGE SIZE STYLES */
 
 /* HEADER AND NAV STYLES */
 
@@ -87,10 +94,107 @@ nav ul li {
   width: 100%;
 }
 
-/* BEGIN STYLES FOR SMALLER DEVICES - TABLETS AND PHONES */
+/* BEGIN STYLES FOR TEASERS SECTION */
+
+.see-and-learn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.teaser {
+  width: 450px;
+  height: 250px;
+  margin: 30px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.teaser-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 14px;
+}
+
+.bg-img-01 {
+  background: url("./images/see-art2.jpg") center center no-repeat;
+}
+.bg-img-02 {
+  background: url("./images/see-project.jpg") center center no-repeat;
+}
+.bg-img-03 {
+  background: url("./images/see-old.jpg") center center no-repeat;
+}
+.bg-img-04 {
+  background: url("./images/see-story.jpg") center center no-repeat;
+}
+
+/* BEGIN STYLES FOR TOUR INFO SECTION */
+
+.tour-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.review {
+  padding: 0.5em 5em 1em 5em;
+}
+
+.reviewer-name {
+  color: aqua;
+}
+
+.tour-dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.tour-date {
+  width: 30%;
+}
+
+.date-img {
+  width: 98%;
+  margin: auto;
+}
+
+/* BEGIN STYLES FOR FOOTER SECTION */
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  width: 109%;
+  margin-left: -5%;
+  margin-bottom: -4%;
+  padding: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+.copyright {
+  color: #fff;
+}
+
+/* BEGIN STYLES FOR SMALLER DEVICES - TABLETS */
 
 @media only screen and (max-width: 840px) {
-  /* For mobile phones: */
+  /* For tablets: */
 
   /* HEADER SECTION STYLE MODIFICATIONS */
   header {
@@ -132,14 +236,20 @@ nav ul li {
   .feature .figure {
     margin: 0 2em 0 0;
     padding: 0;
-    width: 100%;
+    min-width: 240px;
   }
 
   .card-text {
     align-self: flex-end;
   }
-  
+
   .top-fold-img {
     width: 100%;
   }
+}
+
+/* BEGIN STYLES FOR SMALLER DEVICES - PHONES */
+
+@media only screen and (max-width: 375px) {
+  /* For PHONES: */
 }
